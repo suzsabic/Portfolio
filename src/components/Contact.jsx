@@ -4,8 +4,8 @@ import { profile } from '../data'
 
 export default function Contact() {
   return (
-    <>
-      <section className="section container contact" id="kontakt">
+    <section className="contact-screen" id="kontakt">
+      <div className="container contact">
         <p className="eyebrow">Kontakt</p>
         <a className="contact__mail" href={`mailto:${profile.email}`}>{profile.email}</a>
         <div className="socials">
@@ -16,10 +16,10 @@ export default function Contact() {
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>
-      </section>
+      </div>
       <footer className="footer">
         <div className="container">© {new Date().getFullYear()} {profile.name}</div>
       </footer>
-    </>
+    </section>
   )
 }
