@@ -1,12 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-<circle cx="60" cy="60" r="56" fill="#ffd9bf" stroke="#111" stroke-width="4"/>
-<path d="M36 50C32 14 88 14 84 50L86 70H34Z" fill="#6b4228" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
-<path d="M26 96Q30 78 46 76H74Q90 78 94 96Z" fill="#b9e3a8" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
-<circle cx="60" cy="46" r="20" fill="#f6d3b8" stroke="#111" stroke-width="3"/>
-<path d="M40 42C41 24 79 24 80 42C72 35 66 31 60 26C54 31 48 35 40 42Z" fill="#6b4228" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
-<circle cx="52" cy="49" r="2.6" fill="#111"/><circle cx="68" cy="49" r="2.6" fill="#111"/>
-<rect x="34" y="62" width="52" height="34" rx="4" fill="#dfe1e6" stroke="#111" stroke-width="3"/>
-<path d="M60 74C56 70.5 50.5 73.5 51.5 80C52.5 85.5 56 88.5 58 87.8C59 87.4 61 87.4 62 87.8C64 88.5 67.5 85.5 68.5 80C69.5 73.5 64 70.5 60 74Z" fill="#f26a1b" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/>
-<path d="M61 72C60.5 68.5 62.5 66 65.5 65.5C66 68.5 64 71.5 61 72Z" fill="#f26a1b" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/>
-<rect x="28" y="96" width="64" height="6" rx="3" fill="#c9ccd1" stroke="#111" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Skygge -->
+  <rect x="8" y="8" width="52" height="52" rx="12" fill="#111111"/>
+  <!-- Ramme-bakgrunn -->
+  <rect x="4" y="4" width="52" height="52" rx="12" fill="#f1efe8"/>
+  <!-- Pikselkatt -->
+  <path fill="#db6d2e" d="M18 14h3v3h-3z M39 14h3v3h-3z M15 17h6v3h-6z M39 17h6v3h-6z M15 20h9v3h-9z M36 20h9v3h-9z M15 23h30v3h-30z M12 26h36v15h-36z M15 41h30v3h-30z M18 44h24v3h-24z"/>
+  <!-- Ansikt: > -->
+  <rect x="21" y="29" width="3" height="3" fill="#111111"/>
+  <rect x="24" y="32" width="3" height="3" fill="#111111"/>
+  <rect x="21" y="35" width="3" height="3" fill="#111111"/>
+  <!-- Ansikt: _ -->
+  <rect x="30" y="35" width="9" height="3" fill="#111111"/>
+  <!-- Kantlinje (tegnes sist så den ligger over alt) -->
+  <rect x="4" y="4" width="52" height="52" rx="12" fill="none" stroke="#111111" stroke-width="3"/>
 </svg>
