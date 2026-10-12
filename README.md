@@ -14,7 +14,7 @@ Min personlige portefølje som viser prosjekter innen frontend- og mobilutviklin
 
 ```
 src/
-├── components/   # Header, Hero, Projects, ProjectModal, About, Contact
+├── components/   # Header, Hero, Projects, ProjectModal, About, Contact, CodeCard
 ├── data.js       # tekst, prosjekter og ferdigheter
 ├── index.css     # farger, fonter og stil
 └── main.jsx
