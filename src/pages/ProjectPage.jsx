@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faArrowRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { profile, projects } from '../data'
 import Slideshow from '../components/Slideshow'
 
@@ -22,12 +22,10 @@ export default function ProjectPage() {
       <main className="page project container">
         <p className="eyebrow">404</p>
         <h1>Fant ikke prosjektet</h1>
-        <Link className="btn project__next" to="/#prosjekter">Tilbake til prosjekter</Link>
+        <Link className="btn" to="/#prosjekter">Tilbake til prosjekter</Link>
       </main>
     )
   }
-
-  const next = projects[(index + 1) % projects.length]
 
   return (
     <main className="page project container">
@@ -62,12 +60,6 @@ export default function ProjectPage() {
         </dl>
       </div>
 
-      {next.id !== project.id && (
-        <Link className="project__next" to={`/prosjekt/${next.id}`} viewTransition>
-          <span>Neste prosjekt</span>
-          <strong>{next.title} <FontAwesomeIcon icon={faArrowRight} /></strong>
-        </Link>
-      )}
     </main>
   )
 }

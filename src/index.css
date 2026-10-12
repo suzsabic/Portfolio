@@ -261,14 +261,6 @@ p { margin: 0; }
 .project__info { display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px 64px; margin-top: 56px; }
 .project__info .lead { margin-top: 0; }
 .project__link { display: inline-flex; align-items: center; gap: 10px; margin-top: 32px; }
-.project__next {
-  display: flex; flex-direction: column; gap: 4px; margin-top: 80px; padding: 24px 28px;
-  border: 1.5px solid var(--ink); border-radius: 10px; background: var(--paper);
-  box-shadow: 4px 4px 0 var(--ink); transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.project__next:hover, .project__next:focus-visible { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink); }
-.project__next span { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--orange-dark); }
-.project__next strong { font-family: var(--serif); font-weight: 400; font-size: 32px; }
 
 /* Sideoverganger */
 .header { view-transition-name: header; }
