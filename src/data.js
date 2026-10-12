@@ -1,4 +1,4 @@
-import { faLaptopCode, faMobileScreenButton, faPenRuler } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons'
 
 export const profile = {
   name: 'Suzana Sabic',
@@ -6,12 +6,12 @@ export const profile = {
 }
 
 const lorem =
-  'Placeholdertekst. Her kan du beskrive prosjektet: hva det gikk ut på, hvilke utfordringer du løste og hva du er mest fornøyd med.'
+  '...'
 
 export const projects = [
   {
-    id: 1, title: 'Prosjekt #1', type: 'Webapplikasjon', icon: faLaptopCode, tags: ['React', 'Typescript'], tone: 'orange',
-    year: '2026', description: lorem,
+    id: 1, title: 'Renewed', type: 'Mobilapplikasjon', icon: faMobileScreenButton, tags: ['iOS', 'Swift', 'SwiftUI', 'SwiftData'], tone: 'orange',
+    year: '2026', description: 'En app som hjelper deg å holde styr på alle dine abonnementer. Kommer snart.',
     slides: ['orange', 'light', 'chalk'],
     link: {
       label: 'Live',
@@ -19,7 +19,7 @@ export const projects = [
     },
   },
   {
-    id: 2, title: 'Prosjekt #2', type: 'Interaktiv prototype', icon: faPenRuler, tags: ['Figma', 'UI/UX'], tone: 'light',
+    id: 2, title: 'Kommer snart', type: 'Interaktiv prototype', icon: faCode, tags: ['Figma', 'UI/UX'], tone: 'light',
     year: '2026',
     description: lorem,
     link: {
@@ -29,7 +29,7 @@ export const projects = [
     slides: ['orange', 'light', 'chalk'],
   },
   {
-    id: 3, title: 'Prosjekt #3', type: 'iOS-app', icon: faMobileScreenButton, tags: ['React Native', 'Swift'], tone: 'chalk',
+    id: 3, title: 'Kommer snart', type: 'Webapplikasjon', icon: faCode, tags: ['React', 'Typescript', 'HTML', 'CSS', '.NET/C#'], tone: 'chalk',
     year: '2026', description: lorem,
     slides: ['chalk', 'orange', 'light'],
   },

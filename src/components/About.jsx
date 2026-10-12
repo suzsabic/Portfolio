@@ -7,9 +7,9 @@ export default function About() {
       <div className="container about__inner">
         <div>
           <p className="eyebrow">Om meg</p>
-          <h2>Suzana Sabic</h2>
+          <h2>👩🏻‍💻</h2>
           <p className="lead">
-            Bor i Oslo. Er bachelorstudent i informasjonsteknologi med fordypning i frontend- og mobilutvikling ved Høyskolen Kristiania. Går nå tredje året og er ferdig utdannet våren 2027. Er interessert i moderne webutvikling og UI/UX, og liker å kombinere kreativitet og teknologi for å bygge løsninger som både ser bra ut og fungerer godt i praksis.
+            Jeg er en <em>Oslo-basert</em> bachelorstudent i frontend- og mobilutvikling ved Høyskolen Kristiania, ferdig våren 2027. Jeg liker å kombinere <b>kreativitet og teknologi</b>, og drømmer om å lage applikasjoner som gjør hverdagen litt enklere for andre. Utenom koding: gaming, utforske nye kafeer, true crime dokumentarer og like altfor mange kattevideoer på TikTok.
           </p>
           <ul className="tags tags--lg">
             {skills.map((s) => <li key={s}>{s}</li>)}

@@ -182,7 +182,7 @@ p { margin: 0; }
   transition: transform .7s ease-in-out; 
 }
 .tags li:hover {
-  transform: rotate(10deg);
+  transform: rotate(10deg); cursor: default;
 }
 .tags--lg { margin-top: 32px; }
 .tags--lg li { font-size: 14px; padding: 5px 16px; }
