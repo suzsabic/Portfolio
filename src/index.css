@@ -203,30 +203,26 @@ p { margin: 0; }
 
 
 
-/* Bildeshow */
-.slideshow { position: relative; overflow: hidden; border-radius: 10px 10px 0 0; border-bottom: 1.5px solid var(--ink); }
-.slideshow__track { display: flex; transition: transform 0.5s ease; }
-.slide {
-  flex: 0 0 100%; aspect-ratio: 16 / 10; max-height: 60vh; width: 100%; display: grid; place-items: center;
-  font-family: var(--serif); font-size: 64px; color: color-mix(in srgb, var(--paper) 80%, transparent);
+/* Galleri (bento) */
+.gallery { display: flex; flex-direction: column; gap: 24px; }
+.bento { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 24px; }
+.bento__item {
+  margin: 0; overflow: hidden; border: 1.5px solid var(--ink); border-radius: 10px;
+  box-shadow: 5px 5px 0 var(--orange);
+  min-height: 0;
 }
-.slide--img { display: block; object-fit: cover; object-position: top; }
-.slideshow__arrow {
-  position: absolute; top: 50%; transform: translateY(-50%); width: 45px; height: 45px;
-  border: 1.5px solid var(--ink); border-radius: 50%; cursor: pointer; font-size: 20px; line-height: 1;
-  display: grid; place-items: center;
-  background: var(--paper); color: var(--ink);
-  transition: background 0.2s;
+figure.bento__item { background: var(--paper); }
+.bento__item img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.bento > .bento__item:first-child { grid-row: span 2; aspect-ratio: 16 / 11; }
+.bento--1 { grid-template-columns: 1fr; grid-template-rows: auto; }
+.bento--1 > .bento__item:first-child { grid-row: auto; aspect-ratio: 16 / 9; }
+.bento--2 { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+.bento--2 > .bento__item:first-child { grid-row: auto; aspect-ratio: 4 / 3; }
+.bento--2 > .bento__item:last-child { aspect-ratio: 4 / 3; }
+.bento__ph {
+  display: grid; place-items: center; font-family: var(--serif); font-size: 56px;
+  color: color-mix(in srgb, var(--paper) 85%, transparent);
 }
-.slideshow__arrow:hover { background: var(--orange); }
-.slideshow__arrow--prev { left: 16px; }
-.slideshow__arrow--next { right: 16px; }
-.slideshow__dots { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
-.slideshow__dots button {
-  width: 10px; height: 10px; padding: 0; border: 0; border-radius: 50%; cursor: pointer;
-  background: color-mix(in srgb, var(--paper) 55%, transparent); transition: all 0.3s;
-}
-.slideshow__dots button.is-active { background: var(--paper); width: 24px; border-radius: 999px; }
 .meta div { padding: 13px 0; border-bottom: 1px solid var(--ink); display: flex; justify-content: space-between; }
 .meta div:first-child { padding-top: 0; }
 .meta dt { color: var(--ink-soft); }
@@ -255,9 +251,6 @@ p { margin: 0; }
 .project__head { display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 40px; }
 .project__head .card__icon { margin-bottom: 24px; }
 .project__head h1 { font-size: clamp(42px, 6vw, 80px); letter-spacing: 0; }
-.project .slideshow {
-  border: 1.5px solid var(--ink); border-radius: 10px; box-shadow: 6px 6px 0 var(--orange);
-}
 .project__info { display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px 64px; margin-top: 56px; }
 .project__info .lead { margin-top: 0; }
 .project__link { display: inline-flex; align-items: center; gap: 10px; margin-top: 32px; }
@@ -293,6 +286,17 @@ p { margin: 0; }
 @media (max-width: 800px) {
   .hero, .about__inner { grid-template-columns: 1fr; gap: 48px; }
   .grid { grid-template-columns: 1fr; }
-    .slide { font-size: 40px; }
+  .gallery, .bento { gap: 16px; }
+  .bento, .bento--2 { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .bento > .bento__item:first-child, .bento--1 > .bento__item:first-child {
+    grid-column: 1 / -1; grid-row: auto; aspect-ratio: 16 / 10;
+  }
+  .bento--2 > .bento__item:first-child { grid-column: auto; aspect-ratio: 4 / 3; }
+  .bento > .bento__item:not(:first-child) { aspect-ratio: 4 / 3; }
+  .bento__item { box-shadow: 4px 4px 0 var(--orange); }
+  .bento__ph { font-size: 36px; }
   .section { padding-block: 64px; }
+  .project { padding-block: 32px 64px; }
+  .project__info { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 40px; }
+  .meta dd { text-align: right; }
 }

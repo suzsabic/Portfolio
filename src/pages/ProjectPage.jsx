@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { profile, projects } from '../data'
-import Slideshow from '../components/Slideshow'
+import Gallery from '../components/Gallery'
 
 export default function ProjectPage() {
   const { id } = useParams()
@@ -20,8 +20,7 @@ export default function ProjectPage() {
   if (!project) {
     return (
       <main className="page project container">
-        <p className="eyebrow">404</p>
-        <h1>Fant ikke prosjektet</h1>
+        <p className="eyebrow">404 - Fant ikke prosjektet</p>
         <Link className="btn" to="/#prosjekter">Tilbake til prosjekter</Link>
       </main>
     )
@@ -39,7 +38,7 @@ export default function ProjectPage() {
         <h1>{project.title}</h1>
       </header>
 
-      <Slideshow slides={project.slides} />
+      <Gallery slides={project.slides} />
 
       <div className="project__info">
         <div>
