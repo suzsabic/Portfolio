@@ -2,7 +2,7 @@
 
 Min personlige portefølje som viser prosjekter innen frontend- og mobilutvikling.
 
-**Live:** [suzsabic.github.io](https://suzsabic.github.io)
+**Live:** [suzsabic.github.io/Portfolio](https://suzsabic.github.io/Portfolio/)
 
 ## Teknologier
 

@@ -34,7 +34,7 @@ export default function Header() {
     <header className="header">
       <div className="container header__inner">
         <a href="#top" className="logo">
-          <img src="/logo.svg" width="40" height="40" alt="" />
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} width="40" height="40" alt="" />
           {profile.name}
         </a>
         <nav className="nav" aria-label="Hovedmeny">
