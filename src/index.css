@@ -208,7 +208,7 @@ p { margin: 0; }
 .bento { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 24px; }
 .bento__item {
   margin: 0; overflow: hidden; border: 1.5px solid var(--ink); border-radius: 10px;
-  box-shadow: 5px 5px 0 var(--orange);
+  box-shadow: 5px 5px 0 var(--ink);
   min-height: 0;
 }
 figure.bento__item { background: var(--paper); }

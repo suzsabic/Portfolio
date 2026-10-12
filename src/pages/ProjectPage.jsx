@@ -33,7 +33,6 @@ export default function ProjectPage() {
       </Link>
 
       <header className="project__head">
-        <span className="card__icon" aria-hidden="true"><FontAwesomeIcon icon={project.icon} /></span>
         <p className="eyebrow">{project.type}</p>
         <h1>{project.title}</h1>
       </header>
