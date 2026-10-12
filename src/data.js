@@ -3,6 +3,7 @@ import { faCode, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons'
 export const profile = {
   name: 'Suzana Sabic',
   email: 'suza_sabic@hotmail.com',
+  description: 'Suzana Sabic. Jeg er en Oslo-basert bachelorstudent i frontend- og mobilutvikling ved Høyskolen Kristiania, ferdig våren 2027. Jeg liker å kombinere kreativitet og teknologi, og drømmer om å lage applikasjoner som gjør hverdagen litt enklere for andre. Utenom koding: gaming, utforske nye kafeer, true crime dokumentarer, leke med Claude Design/Code og like altfor mange kattevideoer på TikTok.'
 }
 
 
