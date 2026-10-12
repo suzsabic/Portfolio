@@ -10,28 +10,28 @@ const lorem =
 
 export const projects = [
   {
-    id: 1, title: 'Prosjekt #1', type: 'Webapplikasjon', icon: faLaptopCode, tags: ['React', 'Typescript'], tone: 'sage',
+    id: 1, title: 'Prosjekt #1', type: 'Webapplikasjon', icon: faLaptopCode, tags: ['React', 'Typescript'], tone: 'orange',
     year: '2026', description: lorem,
-    slides: ['sage', 'blush', 'sand'],
+    slides: ['orange', 'light', 'chalk'],
     link: {
       label: 'Live',
       href: '',
     },
   },
   {
-    id: 2, title: 'Prosjekt #2', type: 'Interaktiv prototype', icon: faPenRuler, tags: ['Figma', 'UI/UX'], tone: 'blush',
+    id: 2, title: 'Prosjekt #2', type: 'Interaktiv prototype', icon: faPenRuler, tags: ['Figma', 'UI/UX'], tone: 'light',
     year: '2026',
     description: lorem,
     link: {
       label: 'Live',
       href: '',
     },
-    slides: ['sage', 'blush', 'sand'],
+    slides: ['orange', 'light', 'chalk'],
   },
   {
-    id: 3, title: 'Prosjekt #3', type: 'iOS-app', icon: faMobileScreenButton, tags: ['React Native', 'Swift'], tone: 'sand',
+    id: 3, title: 'Prosjekt #3', type: 'iOS-app', icon: faMobileScreenButton, tags: ['React Native', 'Swift'], tone: 'chalk',
     year: '2026', description: lorem,
-    slides: ['sand', 'sage', 'blush'],
+    slides: ['chalk', 'orange', 'light'],
   },
 ]
 

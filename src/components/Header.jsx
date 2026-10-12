@@ -33,7 +33,10 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header__inner">
-        <a href="#top" className="logo">{profile.name}</a>
+        <a href="#top" className="logo">
+          <img src="/logo.svg" width="40" height="40" alt="" />
+          {profile.name}
+        </a>
         <nav className="nav" aria-label="Hovedmeny">
           {links.map((l) => (
             <a key={l.href} href={l.href} aria-label={l.label} data-label={l.label}>
