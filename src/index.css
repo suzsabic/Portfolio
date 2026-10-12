@@ -45,8 +45,16 @@ h1 em {
   font-style: italic; font-weight: 400; color: var(--ink);
   display: inline-block; margin-top: 8px; padding: 0 8px;
   letter-spacing: -3px;
-  background: var(--orange-light); box-shadow: inset 0 -4px 0 var(--orange);
+  background-image:
+    linear-gradient(var(--orange), var(--orange)),
+    linear-gradient(var(--orange-light), var(--orange-light));
+  background-repeat: no-repeat;
+  background-position: left bottom, left bottom;
+  background-size: 0% 4px, 0% 100%;
+  transition: background-size 0.6s ease-in-out;
 }
+h1 a:hover em, h1 a:focus-visible em { background-size: 100% 4px, 100% 100%; }
+@media (prefers-reduced-motion: reduce) { h1 em { transition: none; } }
 h2 { font-size: clamp(35px, 4vw, 51px); }
 h3 { font-size: 26px; }
 p { margin: 0; }
@@ -74,7 +82,7 @@ p { margin: 0; }
   width: 42px; height: 42px; border-radius: 50%; color: var(--ink);
   transition: background 0.3s, color 0.3s;
 }
-.nav a:hover { background: var(--orange-light); color: var(--ink); }
+.nav a:hover { background: var(--ink); color: var(--paper); }
 .nav a::after {
   content: attr(data-label); position: absolute; top: calc(100% + 6px); right: 50%;
   transform: translateX(50%); white-space: nowrap; font-size: 12px;
@@ -100,11 +108,16 @@ p { margin: 0; }
   transform: scale(1.06) translate(-1px, -1px); box-shadow: 5px 5px 0 var(--ink);
 }
 
+
 /* Kodevindu */
 .code {
   width: 100%; max-width: 480px; justify-self: center; background: var(--paper); color: var(--ink);
   border: 1.5px solid var(--ink); border-radius: 10px; overflow: hidden;
-  font-size: clamp(13px, 2.6vw, 15px); box-shadow: 6px 6px 0 var(--orange);
+  font-size: clamp(13px, 2.6vw, 15px); box-shadow: 5px 5px 0 var(--orange);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.code:hover {
+  cursor: default; transform: translate(-7px, -7px); box-shadow: 7px 7px 0 var(--ink);
 }
 .code__bar {
   display: flex; align-items: center; gap: 7px; padding: 14px 16px;
@@ -147,16 +160,16 @@ p { margin: 0; }
 .section__head { margin-bottom: 48px; }
 
 /* Projects */
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .card {
   display: flex; flex-direction: column; align-items: flex-start; width: 100%; padding: 28px 26px;
   background: var(--paper); border: 1.5px solid var(--ink); border-radius: 10px;
-  box-shadow: 4px 4px 0 var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
   font: inherit; color: inherit; text-align: left; cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease-in-out;
 }
 .card:hover, .card:focus-visible {
-  transform: translate(-10px, -10px); box-shadow: 7px 7px 0 var(--ink);
+  transform: translate(-7px, -7px); box-shadow: 7px 7px 0 var(--ink); background: var(--orange-light);
 }
 .card__top { margin-bottom: 28px; }
 .card__icon {
@@ -179,12 +192,12 @@ p { margin: 0; }
 .tags li {
   font-size: 12px; padding: 3px 13px; border: 1px solid var(--ink);
   border-radius: 999px; color: var(--ink); background: var(--paper);
-  transition: transform .7s ease-in-out; 
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 .tags li:hover {
-  transform: rotate(10deg); cursor: default;
+  transform: rotate(10deg); cursor: default;  box-shadow: 0px 0px 10px var(--orange);
 }
-.tags--lg { margin-top: 32px; }
+.tags--lg { margin-top: 32px; max-width: 544px; }
 .tags--lg li { font-size: 14px; padding: 5px 16px; }
 
 
@@ -198,7 +211,7 @@ p { margin: 0; }
 .modal__panel {
   position: relative; width: min(900px, 100%); max-height: 100%; overflow-y: auto;
   background: var(--paper); border: 1.5px solid var(--ink); border-radius: 12px;
-  box-shadow: 8px 8px 0 var(--orange); animation: rise 0.35s ease;
+  box-shadow: 5px 5px 0 var(--ink); animation: rise 0.35s ease;
 }
 .modal__close {
   position: absolute; top: 16px; right: 16px; z-index: 2; width: 40px; height: 40px;
@@ -241,17 +254,16 @@ p { margin: 0; }
 @keyframes rise { from { opacity: 0; transform: translateY(16px) scale(0.98); } }
 
 /* About */
-.about__inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: center; }
+.about__inner { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: center; }
 .about__photo { width: 100%; max-width: 340px; justify-self: center; }
-@media (prefers-reduced-motion: reduce) { .about__image { transition: none; } }
 .about__image {
-  display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover;
-  object-position: 40% 30%; border: 1.5px solid var(--ink); border-radius: 12px;
-  box-shadow: 8px 8px 0 var(--orange);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: block; width: 100%; aspect-ratio: 5 / 6; object-fit: cover;
+  object-position: 45% 30%; border: 1.5px solid var(--ink); border-radius: 12px;
+  box-shadow: 5px 5px 0 var(--orange);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .about__photo:hover .about__image {
-  transform: translate(-4px, -4px); box-shadow: 12px 12px 0 var(--orange);
+  transform: translate(-7px, -7px); box-shadow: 7px 7px 0 var(--ink);
 }
 
 /* Contact */

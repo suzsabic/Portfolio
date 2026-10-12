@@ -5,8 +5,6 @@ export const profile = {
   email: 'suza_sabic@hotmail.com',
 }
 
-const lorem =
-  '...'
 
 export const projects = [
   {
@@ -19,19 +17,14 @@ export const projects = [
     },
   },
   {
-    id: 2, title: 'Kommer snart', type: 'Interaktiv prototype', icon: faCode, tags: ['Figma', 'UI/UX'], tone: 'light',
+    id: 2, title: 'Budgetly', type: 'Webapplikasjon', icon: faCode, tags: ['React', 'Typescript', 'HTML', 'CSS', '.NET/C#'], tone: 'light',
     year: '2026',
-    description: lorem,
+    description: 'En dashboard for budsjettering. Kommer snart.',
     link: {
       label: 'Live',
       href: '',
     },
     slides: ['orange', 'light', 'chalk'],
-  },
-  {
-    id: 3, title: 'Kommer snart', type: 'Webapplikasjon', icon: faCode, tags: ['React', 'Typescript', 'HTML', 'CSS', '.NET/C#'], tone: 'chalk',
-    year: '2026', description: lorem,
-    slides: ['chalk', 'orange', 'light'],
   },
 ]
 
@@ -39,10 +32,11 @@ export const skills = [
   'React',
   'Typescript',
   'Javascript',
-  'HTML & CSS',
+  'HTML',
+  'CSS',
   'Swift',
   'Kotlin',
   '.NET/C#',
   'SQL/MySQL',
-  'Figma',
+  'UX/UI',
 ]

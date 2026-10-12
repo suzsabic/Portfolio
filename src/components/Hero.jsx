@@ -7,7 +7,7 @@ export default function Hero() {
         <p className="eyebrow">Introduksjon</p>
         <h1>
           Hei! Jeg heter
-          <em> Suzana Sabic.</em>
+          <a href="#om-meg"><em> Suzana Sabic.</em></a>
         </h1>
         <p className="lead">
           Velkommen til min portefølje, der jeg viser mine nyeste prosjekter innen frontend og mobilutvikling.
