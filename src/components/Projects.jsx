@@ -1,11 +1,8 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { projects } from '../data'
-import ProjectModal from './ProjectModal'
 
 export default function Projects() {
-  const [active, setActive] = useState(null)
-
   return (
     <section className="section container" id="prosjekter">
       <div className="section__head">
@@ -14,7 +11,7 @@ export default function Projects() {
       </div>
       <div className="grid">
         {projects.map((p) => (
-          <button type="button" className="card" key={p.id} onClick={() => setActive(p)}>
+          <Link className="card" key={p.id} to={`/prosjekt/${p.id}`} viewTransition>
             <div className="card__top">
               <span className="card__icon" aria-hidden="true">
                 <FontAwesomeIcon icon={p.icon} />
@@ -26,10 +23,9 @@ export default function Projects() {
             <ul className="tags">
               {p.tags.map((t) => <li key={t}>{t}</li>)}
             </ul>
-          </button>
+          </Link>
         ))}
       </div>
-      {active && <ProjectModal project={active} onClose={() => setActive(null)} />}
     </section>
   )
 }

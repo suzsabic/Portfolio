@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom'
 import { profile } from '../data'
 
 const icons = {
@@ -30,22 +31,30 @@ const links = [
 ]
 
 export default function Header() {
+  const { pathname } = useLocation()
+  const home = pathname === '/'
+  // På forsiden scroller vanlige anker-lenker mykt. På andre sider går vi via forsiden.
   return (
     <header className="header">
       <div className="container header__inner">
-        <a href="#top" className="logo">
+        <Link to="/" className="logo" viewTransition>
           <img src={`${import.meta.env.BASE_URL}logo.svg`} width="40" height="40" alt="" />
           {profile.name}
-        </a>
+        </Link>
         <nav className="nav" aria-label="Hovedmeny">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} aria-label={l.label} data-label={l.label}>
+          {links.map((l) => {
+            const svg = (
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
                 strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 {icons[l.icon]}
               </svg>
-            </a>
-          ))}
+            )
+            return home ? (
+              <a key={l.href} href={l.href} aria-label={l.label} data-label={l.label}>{svg}</a>
+            ) : (
+              <Link key={l.href} to={`/${l.href}`} aria-label={l.label} data-label={l.label} viewTransition>{svg}</Link>
+            )
+          })}
         </nav>
       </div>
     </header>
