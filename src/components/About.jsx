@@ -1,5 +1,5 @@
 import { skills, profile } from '../data'
-import portrait from '../assets/suzana.jpg'
+import portrait from '../assets/suzana.png'
 
 export default function About() {
   return (
@@ -16,7 +16,7 @@ export default function About() {
           </ul>
         </div>
         <div className="about__photo">
-          <img className="about__image" src={portrait} alt="Portrett av Suzana Sabic" />
+          <img className="about__image" src={portrait} />
         </div>
       </div>
     </section>
