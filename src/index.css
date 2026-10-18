@@ -107,6 +107,7 @@ p { margin: 0; }
 .btn:hover, .btn:focus-visible {
   transform: translate(-5px, -5px); box-shadow: 7px 7px 0 var(--ink);
   background: var(--orange-light);
+  cursor: url("hand-pointer.png"), auto;
 }
 
 
@@ -117,8 +118,8 @@ p { margin: 0; }
   font-size: clamp(13px, 2.6vw, 15px); box-shadow: 5px 5px 0 var(--ink);
   transition: transform 0.5s ease-in-out, box-shadow 0.2s ease;
 }
-.code:hover {
-  cursor: default; transform: translate(-7px, -7px); box-shadow: 7px 8px 0 var(--orange);
+.code:hover { 
+  transform: translate(-7px, -7px); box-shadow: 7px 8px 0 var(--orange);
 }
 .code__bar {
   display: flex; align-items: center; gap: 7px; padding: 14px 16px;

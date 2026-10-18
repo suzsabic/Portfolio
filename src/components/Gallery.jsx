@@ -1,5 +1,3 @@
-// Bento-galleri: ett stort bilde og to mindre, i grupper på tre.
-// Hvert element i `slides` er enten en plassholderfarge (tekst) eller { src, alt }.
 function Item({ slide, number }) {
   if (typeof slide === 'string') {
     return (
